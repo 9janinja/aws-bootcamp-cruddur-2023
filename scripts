@@ -1,11 +1,21 @@
-CREATE BUDGET
+#CREATE ENVIRONMENTAL VARIABLE
+export ACCOUNT_ID=$(aws sts get-caller-identity --query Account --ouput text)
+
+#CREATE BUDGET
 aws budgets create-budget \
     --account-id $ACCOUNT_ID \
     --budget file://aws/json/budget.json \
     --notifications-with-subscribers file://aws/json/notifications-with-subscribers.json
 
 
-BILLING ALARM: 
-#CREATE SNS TOPIC
+#BILLING ALARM: CREATE SNS TOPIC
 aws sns create-topic \
     --name Billing-Alarm
+
+aws sns subscribe \
+    --topic-arn arn:aws:sns:us-east-1:826151320380:Billing-Alarm \
+    --protocol email \
+    --notification-endpoint awurebarry@gmail.com
+
+#Set Alarm
+aws cloudwatch put-metric-alarm --cli-input-json file://aws/json/alarm_config.json
