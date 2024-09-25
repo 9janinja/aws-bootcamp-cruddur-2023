@@ -1,5 +1,5 @@
 # Week 0 — Billing and Architecture
 
 # Adding Images
-![Quiz Image](journal/assets/quiz.PNG)
+![Dem Grid Image](journal/assets/demogrid.png)
 
