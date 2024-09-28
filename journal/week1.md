@@ -2,8 +2,8 @@
 
 ### STEPS
 * Ensure your app runs locally first before containering
-- Set Environmental Variables for the app
-    `export FRONTEND_URL = "*"`
+- Set Environmental Variables for the app.  <br>
+    `export FRONTEND_URL = "*"` <br>
     `export BACKEND_URL = "*"`
 
 - Run the app
