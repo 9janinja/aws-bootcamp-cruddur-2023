@@ -14,7 +14,6 @@ COPY . .
 ENV FLASK_ENV=development
 
 #set the port that the app will be running on. docker run -e PORT=4567 -p 4567:4567 my-flask-app
-
 EXPOSE ${PORT}
 
 #CMD is used to specify the command that will be run when the container is started. python3 -m flask run --host=0.0.0.0 --port=4567
