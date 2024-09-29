@@ -76,6 +76,7 @@ Create a file here: `frontend-react-js/Dockerfile`
 We want to run both docker containers at the same time using docker compose.
 ### Create a docker-compose file
 Create docker-compose.yml at the root of your project.
+
     version: "3.8"
         services:
         backend-flask:
