@@ -97,8 +97,8 @@ Create docker-compose.yml at the root of your project.
             volumes:
                 - ./frontend-react-js:/frontend-react-js
 
-# the name flag is a hack to change the default prepend folder
-# name when outputting the image names
+    # the name flag is a hack to change the default prepend folder
+    # name when outputting the image names
     networks: 
         internal-network:
             driver: bridge
