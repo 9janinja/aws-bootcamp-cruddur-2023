@@ -77,7 +77,7 @@ We want to run both docker containers at the same time using docker compose.
 ### Create a docker-compose file
 Create docker-compose.yml at the root of your project.
     version: "3.8"
-    services:
+        services:
         backend-flask:
             environment:
                 FRONTEND_URL: "https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
