@@ -17,4 +17,6 @@ ENV FLASK_ENV=development
 EXPOSE ${PORT}
 
 #CMD is used to specify the command that will be run when the container is started. python3 -m flask run --host=0.0.0.0 --port=4567
+#The square brackets ([...]) in the CMD instruction in a Dockerfile indicate that the command is being specified in "exec form" rather than "shell form."
+#Shell form is useful if you need shell features, like command chaining (e.g., using &&, ||, or pipes like |).
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
